@@ -6,7 +6,7 @@ from configurations import Configuration
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 
 
-class Common(Configuration):
+class BaseConfig(Configuration):
 
     INSTALLED_APPS = (
         'django.contrib.admin',
@@ -23,7 +23,7 @@ class Common(Configuration):
         'django_filters',            # for filtering rest endpoints
 
         # Your apps
-        '{{cookiecutter.app_name}}.users',
+        'apps.users',
 
     )
 

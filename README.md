@@ -15,6 +15,10 @@
   </p>
 </p>
 
+## Data Science Clinic Django Rest Cookiecutter
+
+Forked from [cookiecutter-django-rest](https://github.com/agconti/cookiecutter-django-rest) and modified to suit specific needs of data science clinic and follow recommendatations of *Two Scoops of Django*
+
 You need to make a scalable api on a deadline. You deeply care about the quality of your work.
 `cookiecutter-django-rest` takes care of the details so you can focus on making your api awesome.  Scaffolding a project takes seconds and it gives you [authentication](https://github.com/agconti/cookiecutter-django-rest/blob/master/%7B%7Bcookiecutter.github_repository_name%7D%7D/docs/api/authentication.md), [user accounts](https://github.com/agconti/cookiecutter-django-rest/blob/master/%7B%7Bcookiecutter.github_repository_name%7D%7D/%7B%7Bcookiecutter.app_name%7D%7D/users/views.py), and the [docs](https://github.com/agconti/cookiecutter-django-rest/blob/master/%7B%7Bcookiecutter.github_repository_name%7D%7D/docs/api/users.md) and [tests](https://github.com/agconti/cookiecutter-django-rest/blob/master/%7B%7Bcookiecutter.github_repository_name%7D%7D/%7B%7Bcookiecutter.app_name%7D%7D/users/test/test_views.py) to support them. Just add your own resources to the api and start shipping. ✨ 💅
 
