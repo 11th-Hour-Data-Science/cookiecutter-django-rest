@@ -39,9 +39,9 @@ class BaseConfig(Configuration):
     )
 
     ALLOWED_HOSTS = ["*"]
-    ROOT_URLCONF = '{{ cookiecutter.app_name }}.urls'
+    ROOT_URLCONF = 'config.urls'
     SECRET_KEY = os.getenv('DJANGO_SECRET_KEY')
-    WSGI_APPLICATION = '{{ cookiecutter.app_name }}.wsgi.application'
+    WSGI_APPLICATION = 'config.wsgi.application'
 
     # Email
     EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
