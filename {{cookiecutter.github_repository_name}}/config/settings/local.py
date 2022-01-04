@@ -16,7 +16,7 @@ class LocalConfig(BaseConfig):
         '--nologcapture',
         '--with-coverage',
         '--with-progressive',
-        '--cover-package={{cookiecutter.app_name}}'
+        '--cover-package=api'
     ]
 
     # Mail
