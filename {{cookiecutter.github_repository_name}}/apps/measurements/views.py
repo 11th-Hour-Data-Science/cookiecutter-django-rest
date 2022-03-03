@@ -4,9 +4,7 @@ from .models import Stations, Measurements
 from .serializers import StationSerializer, MeasurementSerializer
 
 
-class StationViewSet(mixins.RetrieveModelMixin,
-                  mixins.UpdateModelMixin,
-                  viewsets.GenericViewSet):
+class StationViewSet(viewsets.ModelViewSet):
     """
     Updates and retrieves user accounts
     """
@@ -14,8 +12,7 @@ class StationViewSet(mixins.RetrieveModelMixin,
     serializer_class = StationSerializer
 
 
-class MeasurementViewSet(mixins.CreateModelMixin,
-                        viewsets.GenericViewSet):
+class MeasurementViewSet(viewsets.ModelViewSet):
     """
     Creates user accounts
     """
