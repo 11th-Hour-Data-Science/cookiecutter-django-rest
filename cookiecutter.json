@@ -1,6 +1,7 @@
 {
     "github_repository_name": "piedpiper-web",
-    "email": "richard.hendriks@piedpiper.com",
-    "description": "Its all about a Weissman score > 5.0",
-    "github_username": "The owner of the repository. Either your github username or organization name."
+    "project_name": "Data Pipeline API",
+    "email": "",
+    "description": "Cookie cutter API",
+    "github_username": "11th-Hour-Data-Science"
 }
