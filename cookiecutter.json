@@ -1,6 +1,7 @@
 {
     "github_repository_name": "piedpiper-web",
     "project_name": "Data Pipeline API",
+    "root_dir_name": "api",
     "email": "",
     "description": "Cookie cutter API",
     "github_username": "11th-Hour-Data-Science"
