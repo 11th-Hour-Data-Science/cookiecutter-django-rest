@@ -1,2 +1,2 @@
-from .local import Local  # noqa
-from .production import Production  # noqa
+from config.settings.local import Local  # noqa
+from config.settings.production import Production  # noqa

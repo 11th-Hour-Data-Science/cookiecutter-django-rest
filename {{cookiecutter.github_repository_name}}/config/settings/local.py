@@ -3,7 +3,7 @@ from .base import BaseConfig
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 
 
-class LocalConfig(BaseConfig):
+class Local(BaseConfig):
     DEBUG = True
 
     # Testing

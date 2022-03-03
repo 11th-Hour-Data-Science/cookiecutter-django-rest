@@ -24,6 +24,7 @@ class BaseConfig(Configuration):
 
         # Your apps
         'apps.users',
+        'apps.measuremnts'
 
     )
 
