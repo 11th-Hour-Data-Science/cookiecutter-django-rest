@@ -15,6 +15,12 @@ Start the dev server for local development:
 ```bash
 docker-compose up
 ```
+When you first start or make changes to a model, you must run:
+```bash
+docker-compose run --rm web python manage.py makemigrations <app-name>
+docker-compose run --rm web python manage.py migrate
+```
+
 
 Run a command inside the docker container:
 
