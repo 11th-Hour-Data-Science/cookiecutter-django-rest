@@ -14,7 +14,7 @@ class StationViewSet(mixins.RetrieveModelMixin,
     serializer_class = StationSerializer
 
 
-class MeasurementCreateViewSet(mixins.CreateModelMixin,
+class MeasurementViewSet(mixins.CreateModelMixin,
                         viewsets.GenericViewSet):
     """
     Creates user accounts
