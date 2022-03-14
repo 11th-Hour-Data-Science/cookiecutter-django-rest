@@ -23,7 +23,9 @@ class BaseConfig(Configuration):
         'django_filters',            # for filtering rest endpoints
 
         # Your apps
+        {% if cookiecutter.include_users == "yes" -%}
         'apps.users',
+        {% endif -%}
         'apps.measurements'
 
     )
@@ -180,8 +182,10 @@ class BaseConfig(Configuration):
         }
     }
 
+    {% if cookiecutter.include_users == "yes" -%}
     # Custom user app
     AUTH_USER_MODEL = 'users.User'
+    {% endif -%}
 
     # Django Rest Framework
     REST_FRAMEWORK = {
@@ -192,11 +196,12 @@ class BaseConfig(Configuration):
             'rest_framework.renderers.JSONRenderer',
             'rest_framework.renderers.BrowsableAPIRenderer',
         ),
-        'DEFAULT_PERMISSION_CLASSES': [
+        {% if cookiecutter.include_users == "yes" %}'DEFAULT_PERMISSION_CLASSES': [
             'rest_framework.permissions.IsAuthenticated',
         ],
         'DEFAULT_AUTHENTICATION_CLASSES': (
             'rest_framework.authentication.SessionAuthentication',
             'rest_framework.authentication.TokenAuthentication',
-        )
+        ){% else %}'DEFAULT_PERMISSION_CLASSES': [],
+        'DEFAULT_AUTHENTICATION_CLASSES': (){% endif %}    
     }

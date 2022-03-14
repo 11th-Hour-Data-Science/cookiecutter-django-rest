@@ -5,12 +5,16 @@ from django.contrib import admin
 from django.views.generic.base import RedirectView
 from rest_framework.routers import DefaultRouter
 from rest_framework.authtoken import views
+{% if cookiecutter.include_users == "yes" -%}
 from apps.users.views import UserViewSet, UserCreateViewSet
+{% endif -%}
 from apps.measurements.views import StationViewSet, MeasurementViewSet
 
 router = DefaultRouter()
+{% if cookiecutter.include_users == "yes" -%}
 router.register(r'users', UserViewSet)
 router.register(r'users', UserCreateViewSet)
+{% endif -%}
 router.register(r'stations', StationViewSet)
 router.register(r'measurements', MeasurementViewSet)
 
