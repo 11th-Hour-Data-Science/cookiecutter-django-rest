@@ -1,8 +1,7 @@
-import uuid
 from django.db import models
 
 class Stations(models.Model):
-    id = models.UUIDField(primary_key=True, default=uuid.uuid4, editable=False)
+    id = models.CharField(max_length=20, primary_key=True)
     name = models.CharField(max_length=200)
     latitude = models.DecimalField(
         "Latitude of station",
@@ -20,7 +19,6 @@ class Stations(models.Model):
 
 
 class Measurements(models.Model):
-    id = models.UUIDField(primary_key=True, default=uuid.uuid4, editable=False)
     station = models.ForeignKey(
         Stations,
         on_delete=models.CASCADE
