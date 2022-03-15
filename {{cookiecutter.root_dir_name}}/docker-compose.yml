@@ -2,7 +2,7 @@ version: '3.4'
 services:
   postgres:
     image: postgres:11.6
-  web:
+  api:
     restart: always
     environment:
       - DJANGO_SECRET_KEY=local

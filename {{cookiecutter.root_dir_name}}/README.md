@@ -17,13 +17,16 @@ docker-compose up
 ```
 When you first start or make changes to a model, you must run:
 ```bash
-docker-compose run --rm web python manage.py makemigrations <app-name>
-docker-compose run --rm web python manage.py migrate
+docker-compose run --rm api python manage.py makemigrations <app-name>
+docker-compose run --rm api python manage.py migrate
 ```
-
+To seed the database, run:
+```bash
+docker-compose run --rm api python manage.py seed <stations to create>
+```
 
 Run a command inside the docker container:
 
 ```bash
-docker-compose run --rm web [command]
+docker-compose run --rm api [command]
 ```
